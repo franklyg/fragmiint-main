@@ -53,6 +53,7 @@ p{
   z-index: 0;
   opacity: 0;
   animation: fadeInVideo 1s forwards linear;
+  pointer-events: none;
 }
 
 @keyframes fadeInVideo{
