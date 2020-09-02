@@ -6,6 +6,10 @@ function linkResolver(doc) {
     return `/posts/${doc.uid}`
   }
 
+  if (doc.type === 'music') {
+    return `/music/`
+  }
+
   // Fallback for other types, in case new custom types get created
   return `/${doc.uid}`
 }
