@@ -3,16 +3,14 @@ import { musicPageData } from '../../lib/api';
 import Layout from '../../components/layout';
 import Music from '../../components/music-item'
 
-// {/*<p>
-//   <Music album={album} service={'spotify'} serviceName={'Spotify'} />
-//   <Music album={album} service={'appleMusic'} serviceName={'Apple'} />
-//   <Music album={album} service={'amazonMusic'} serviceName={'Amazon'} />
-//   <Music album={album} service={'deezer'} serviceName={'Deezer'} />
-//   <Music album={album} service={'tidal'} serviceName={'Tidal'} />
-//   <Music album={album} service={'google'} serviceName={'Google'} />
-// </p>*/}
+import ReactGA from 'react-ga';
+const trackingId = "UA-177158230-1";
 
 export default function MusicPage({ allPosts, album, albumCover, api }) {
+
+    ReactGA.initialize(trackingId);
+    ReactGA.pageview('/music');
+
     const albumPost = allPosts.slice(0)
     return(
       <>
