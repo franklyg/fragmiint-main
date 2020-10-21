@@ -71,9 +71,9 @@ export async function getStaticProps({ preview = false, previewData }, ctx) {
   // const api = []
   // let api_song_info = []
 
-  let cover = []
+  //let cover = []
 
-  let albumCover = []
+  //let albumCover = []
 
   for(const post of allPosts){
     for(const album of post.node.body){
